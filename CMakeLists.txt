@@ -1,0 +1,15 @@
+cmake_minimum_required(VERSION 3.16)
+project(classTest C)
+
+set(CMAKE_C_STANDARD 11)
+
+add_executable(classTest main.c)
+add_executable(problem2 divisibility.c)
+add_executable(problem3 swaping.c)
+add_executable(problem4 call_by_reference_swapping.c)
+add_executable(problem5 area_program.c)
+add_executable(problem6 number_of_vowels_consonents.c)
+add_executable(problem7 pointer_testing.c)
+add_executable(problem8 pointer_learning_1.c)
+target_link_libraries(problem2 m)
+target_link_libraries(problem3 m)
