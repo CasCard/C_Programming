@@ -70,18 +70,26 @@ void convert(int words,char english[],char piglatin[]){
     for (n = 1; n <= words; ++n) {
 //        locate the end of the current word
         count=m1;
+        printf("\n count %d = m1 %d",count,m1);
         while (english[count] != ' '){
+            printf("\n chracter = %c",english[count]);
             m2=count++;
+            printf("\nInside count loop m2 = %d count = %d ",m2,count);
         }
+        printf("\n m2 = %d count = %d ",m2,count);
 //        transpose the first letter and add 'a'
         for (count = m1; count < m2; ++count) {
             piglatin[count+(n-1)]=english[count+1];
+            printf("\n count= %d piglatin[count+(n-1)]= %c piglatin[count+1]=%c",count,piglatin[count+(n-1)],english[count+1]);
         }
         piglatin[m2 + (n-1)] = english[m1];
+        printf("\n piglatin[m2 + (n-1)] = %c",piglatin[m2 + (n-1)]);
         piglatin[m2 + n] = 'a';
+        printf("\n piglatin[m2 + n] = %c",piglatin[m2 + n]);
 
 //        reset the initial marker
         m1=m2+2;
+        printf("\n m1 = %d m2 = %d",m1,m2);
     }
 }
 void writeoutput(char piglatin[]){
